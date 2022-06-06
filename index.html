@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<title>Dient</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="search" viewBox="0 0 24 24">
+			<g mask="url(#mask0_228_269)">
+				<path d="M15 16L19.5 21.5" stroke-width="1.5"/>
+				<circle cx="11" cy="10" r="7" stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="favorite" viewBox="0 0 22 21">
+			<g>
+				<path d="M19.4134 2.76153C18.3781 1.62561 16.9575 1 15.413 1C14.2585 1 13.2012 1.36922 12.2704 2.09733C11.8008 2.46486 11.3752 2.9145 11 3.43932C10.6249 2.91466 10.1992 2.46486 9.7294 2.09733C8.79877 1.36922 7.74149 1 6.58701 1C5.04251 1 3.62177 1.62561 2.58646 2.76153C1.56351 3.88418 1 5.41788 1 7.08032C1 8.79138 1.63034 10.3576 2.98364 12.0096C4.19427 13.4873 5.93423 14.9873 7.94916 16.7243C8.63718 17.3175 9.41705 17.9899 10.2268 18.7061C10.4408 18.8957 11 19.5 11 19.5C11 19.5 11.5592 18.8957 11.7729 18.7064C12.5826 17.99 13.363 17.3173 14.0513 16.7238C16.0659 14.9872 17.8059 13.4873 19.0165 12.0094C20.3698 10.3576 21 8.79138 21 7.08016C21 5.41788 20.4365 3.88418 19.4134 2.76153Z"  stroke-width="2"/>
+			</g>
+		</symbol>
+	</svg>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__row header-mobile">
+						<div class="header__location location">
+							<select>
+								<option value="1">Новосибирск</option>
+								<option value="2">Москва</option>
+							</select>
+						</div>
+						<nav class="header__nav">
+							<ul>
+								<li><a href="#" class="header__link">О компании</a></li>
+								<li><a href="#" class="header__link">Обратная связь</a></li>
+								<li><a href="#" class="header__link">Вопрос-ответ</a></li>
+								<li><a href="#" class="header__link">Оплата</a></li>
+								<li><a href="#" class="header__link">Доставка</a></li>
+								<li><a href="#" class="header__link">Контакты</a></li>
+								<li><a href="#" class="header__link">Госзаказ</a></li>
+							</ul>
+						</nav>
+						<div class="header__phone">
+							<a href="tel:+79252866828">+7 925 286 68 28</a>
+						</div>
+					</div>
+					<div class="header__row">
+						<a href="#" class="header__logo logo">
+							<div class="logo__title">
+								<img src="assets/images/logo.svg" alt="">
+							</div>
+							<span class="logo__subtitle">товары для офиса и дома онлайн</span>
+						</a>
+						<div class="burger">
+							<span class="burger__item"></span>
+						</div>
+						<div class="header__menu">
+							<a href="catalog.html" class="catalog-btn">
+								<div class="catalog-btn__burger">
+									<span class="catalog-btn__burger-item"></span>
+								</div>
+								<span>Каталог товаров</span>
+							</a>
+							<form class="header__search search">
+								<input type="text" placeholder="Поиск по названию, коду, артикулу товара...">
+								<button type="submit">
+									<svg>
+										<use xlink:href="#search"></use>
+									</svg>
+								</button>
+							</form>
+							<div class="header__buttons">
+								<a href="#" class="header__button cart">
+									<img src="assets/images/cart.svg" alt="">
+									<span class="cart__number">2</span>
+								</a>
+								<a href="#" class="header__button">
+									<img src="assets/images/heart.svg" alt="">
+								</a>
+								<a href="#" class="header__button user">
+									<img src="assets/images/user.svg" alt="">
+									<span class="header__button-subtitle">Вход в аккаунт</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="intro">
+				<div class="container">
+					<div class="intro__inner">
+						<div class="slider-arrows">
+							<div class="slider-arrow slider-arrow_prev">
+								<img src="assets/images/arrow_red.svg" alt="">
+							</div>
+							<div class="slider-arrow slider-arrow_next">
+								<img src="assets/images/arrow_red.svg" alt="">
+							</div>
+						</div>
+						<div class="intro__slider">
+							<div class="intro__slide">
+								<div class="intro__item">
+									<div class="intro__photo">
+										<img src="assets/images/intro-photo_1.png" alt="">
+									</div>
+									<div class="intro__info">
+										<div class="intro__title">удобная офисная мебель</div>
+										<div class="intro__subtitle">со скидкой 50%</div>
+									</div>
+								</div>
+							</div><!--/intro__slide-->
+							<div class="intro__slide">
+								<div class="intro__item">
+									<div class="intro__photo">
+										<img src="assets/images/intro-photo_1.png" alt="">
+									</div>
+									<div class="intro__info">
+										<div class="intro__title">удобная офисная мебель</div>
+										<div class="intro__subtitle">со скидкой 50%</div>
+									</div>
+								</div>
+							</div><!--/intro__slide-->
+							<div class="intro__slide">
+								<div class="intro__item">
+									<div class="intro__photo">
+										<img src="assets/images/intro-photo_1.png" alt="">
+									</div>
+									<div class="intro__info">
+										<div class="intro__title">удобная офисная мебель</div>
+										<div class="intro__subtitle">со скидкой 50%</div>
+									</div>
+								</div>
+							</div><!--/intro__slide-->
+							<div class="intro__slide">
+								<div class="intro__item">
+									<div class="intro__photo">
+										<img src="assets/images/intro-photo_1.png" alt="">
+									</div>
+									<div class="intro__info">
+										<div class="intro__title">удобная офисная мебель</div>
+										<div class="intro__subtitle">со скидкой 50%</div>
+									</div>
+								</div>
+							</div><!--/intro__slide-->
+						</div>
+					</div>
+				</div>
+			</div><!--/intro-->
+			<section class="recommend section">
+				<div class="container">
+					<div class="section__header">
+						<h2 class="title">Рекомендуем вам <span class="title-dot"></span></h2>
+						<a href="#" class="section__link">Перейти</a>
+					</div>
+					<div class="recommend__content">
+						<div class="tabs-nav">
+							<a href="#" onclick="javascript:tabsRecommend(1);return false;" class="t1 active">Новинки</a>
+							<a href="#" onclick="javascript:tabsRecommend(2);return false;"  class="t2">Хиты продаж</a>
+							<a href="#" onclick="javascript:tabsRecommend(3);return false;"  class="t3">Распродажа</a>
+							<a href="#" onclick="javascript:tabsRecommend(4);return false;"  class="t4">Сделано в России</a>
+						</div><!--/tabs-nav-->
+						<div class="tabs-block tab_1">
+							<div class="recommend__inner">
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_1.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Клей-карандаш Гамма "Мультики", 21г, ПВП</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_2.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 65%"></div>
+                            					</div>
+												<span>3.7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Мелки школьные Гамма, белые, 10шт., мягкие, круглые, картонная упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>27,16 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">27,16 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_3.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Пастель масляная Гамма "Студия", 12 цветов, картон. упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>154,25 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">154,25 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_4.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Бумага Снегурочка А4, Марка С, 500л.</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_1.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Клей-карандаш Гамма "Мультики", 21г, ПВП</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_2.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Мелки школьные Гамма, белые, 10шт., мягкие, круглые, картонная упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>27,16 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">27,16 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_3.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Пастель масляная Гамма "Студия", 12 цветов, картон. упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>154,25 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">154,25 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_4.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Бумага Снегурочка А4, Марка С, 500л.</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+							</div>
+						</div><!--/tabs-block-->
+						<div class="tabs-block tab_2">
+							<div class="recommend__inner">
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_1.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Клей-карандаш Гамма "Мультики", 21г, ПВП</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_2.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 65%"></div>
+                            					</div>
+												<span>3.7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Мелки школьные Гамма, белые, 10шт., мягкие, круглые, картонная упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>27,16 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">27,16 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_3.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Пастель масляная Гамма "Студия", 12 цветов, картон. упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>154,25 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">154,25 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_4.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Бумага Снегурочка А4, Марка С, 500л.</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_1.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Клей-карандаш Гамма "Мультики", 21г, ПВП</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_2.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Мелки школьные Гамма, белые, 10шт., мягкие, круглые, картонная упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>27,16 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">27,16 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_3.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Пастель масляная Гамма "Студия", 12 цветов, картон. упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>154,25 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">154,25 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_4.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Бумага Снегурочка А4, Марка С, 500л.</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+							</div>
+						</div><!--/tabs-block-->
+						<div class="tabs-block tab_3">
+							<div class="recommend__inner">
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_1.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Клей-карандаш Гамма "Мультики", 21г, ПВП</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_2.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 65%"></div>
+                            					</div>
+												<span>3.7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Мелки школьные Гамма, белые, 10шт., мягкие, круглые, картонная упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>27,16 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">27,16 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_3.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Пастель масляная Гамма "Студия", 12 цветов, картон. упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>154,25 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">154,25 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_4.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Бумага Снегурочка А4, Марка С, 500л.</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_1.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Клей-карандаш Гамма "Мультики", 21г, ПВП</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_2.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Мелки школьные Гамма, белые, 10шт., мягкие, круглые, картонная упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>27,16 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">27,16 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_3.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Пастель масляная Гамма "Студия", 12 цветов, картон. упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>154,25 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">154,25 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_4.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Бумага Снегурочка А4, Марка С, 500л.</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+							</div>
+						</div><!--/tabs-block-->
+						<div class="tabs-block tab_4">
+							<div class="recommend__inner">
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_1.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Клей-карандаш Гамма "Мультики", 21г, ПВП</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_2.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 65%"></div>
+                            					</div>
+												<span>3.7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Мелки школьные Гамма, белые, 10шт., мягкие, круглые, картонная упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>27,16 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">27,16 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_3.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Пастель масляная Гамма "Студия", 12 цветов, картон. упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>154,25 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">154,25 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_4.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Бумага Снегурочка А4, Марка С, 500л.</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_1.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Клей-карандаш Гамма "Мультики", 21г, ПВП</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_2.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Мелки школьные Гамма, белые, 10шт., мягкие, круглые, картонная упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>27,16 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">27,16 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_3.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Пастель масляная Гамма "Студия", 12 цветов, картон. упаковка</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>154,25 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">154,25 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+								<div class="product-box">
+									<a href="#" class="favorite">
+										<svg>
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+									<a href="#" class="product-box__link">
+										<div class="product-box__photo">
+											<img src="assets/images/product_4.png" alt="">
+										</div>
+										<div class="product-box__info">
+											<div class="product-box__rating">
+												<div class="rating-star">
+                              						<div style="width: 100%"></div>
+                            					</div>
+												<span>4,7</span>
+											</div>
+											<div class="product-box__reviews">54 отзыва</div>
+										</div>
+										<div class="product-box__title">Бумага Снегурочка А4, Марка С, 500л.</div>
+									</a>
+									<div class="product-box__foot">
+										<div class="product-box__price price">
+											<span>54,81 ₽</span>
+											<span>/ за 1 шт.</span>
+										</div>
+										<a href="#" class="product-box__btn cart-btn">
+											<img src="assets/images/cart.svg" alt="">
+										</a>
+									</div>
+									<div class="product-box__buy">
+										<div class="product-box__quantity quantity">
+											<a href="#" class="quantity__subtract"></a>
+											<input class="quantity__number" type="text" value="1">
+											<a href="#" class="quantity__add"></a>
+										</div>
+										<div class="product-box__pay pay">
+											<div class="pay__description">Сумма к оплате</div>
+											<div class="pay__sum">43,88 ₽</div>
+										</div>
+									</div>
+								</div><!--/product-box-->
+							</div>
+						</div><!--/tabs-block-->
+					</div>
+				</div>
+			</section><!--/recommend-->
+			<section class="popular section">
+				<div class="container">
+					<div class="section__header">
+						<h2 class="title">Популярные категории <span class="title-dot"></span></h2>
+						<div class="popular__inner">
+							<div class="popular__col">
+								<a href="#" class="popular-box popular-box_big popular-box_blue">
+									<div class="popular-box__info">
+										<div class="popular-box__sale">-20%</div>
+										<div class="popular-box__title popular-box__title_big">Бумага Снегурочка А4</div>
+										<div class="popular-box__subtitle">При покупке 20 упаковок в одном заказе</div>
+									</div>
+									<div class="popular-box__bigphoto">
+										<img src="assets/images/paper.png" alt="">
+									</div>
+								</a><!--/popular-box-->
+							</div><!--/popular__col-->
+							<div class="popular__col">
+								<a href="#" class="popular-box popular-box_yellow">
+									<div class="popular-box__info">
+										<div class="popular-box__title popular-box__title_bl">Бытовая техника</div>
+									</div>
+									<div class="popular-box__photo">
+										<img src="assets/images/tech.png" alt="">
+									</div>
+								</a><!--/popular-box-->
+								<a href="#" class="popular-box popular-box_lblue">
+									<div class="popular-box__info">
+										<div class="popular-box__title popular-box__title_bl">Бумажная продукция для офиса</div>
+									</div>
+									<div class="popular-box__photo">
+										<img src="assets/images/notebook.png" alt="">
+									</div>
+								</a><!--/popular-box-->
+							</div><!--/popular__col-->
+							<div class="popular__col">
+								<a href="#" class="popular-box popular-box_purple">
+									<div class="popular-box__info">
+										<div class="popular-box__title">Письменные товары, черчение</div>
+									</div>
+									<div class="popular-box__photo">
+										<img src="assets/images/pen.png" alt="">
+									</div>
+								</a><!--/popular-box-->
+								<a href="#" class="popular-box popular-box_pink">
+									<div class="popular-box__info">
+										<div class="popular-box__title">Хозтовары, упаковка</div>
+									</div>
+									<div class="popular-box__photo">
+										<img src="assets/images/cart-paper.png" alt="">
+									</div>
+								</a><!--/popular-box-->
+							</div><!--/popular__col-->
+							<div class="popular__col">
+								<a href="#" class="popular-box popular-box_green">
+									<div class="popular-box__info">
+										<div class="popular-box__title">Папки, системы архивации</div>
+									</div>
+									<div class="popular-box__photo">
+										<img src="assets/images/file.png" alt="">
+									</div>
+								</a><!--/popular-box-->
+								<a href="#" class="popular-box popular-box_blue-2">
+									<div class="popular-box__info">
+										<div class="popular-box__title">Мебель</div>
+									</div>
+									<div class="popular-box__photo">
+										<img src="assets/images/chair.png" alt="">
+									</div>
+								</a><!--/popular-box-->
+							</div><!--/popular__col-->
+						</div>
+					</div>
+				</div>
+			</section><!--/popular-->
+			<section class="news">
+				<div class="container">
+					<div class="section__header">
+						<h2 class="title">Новости <span class="title-dot"></span></h2>
+						<a href="#" class="section__link">Перейти</a>
+					</div>
+					<div class="news__inner">
+						<div class="news-box">
+							<div class="news-box__info">
+								<div class="news-box__data">15.04.2022</div>
+								<a href="#" class="news-box__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+								<div class="news-box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+							</div>
+							<div class="news-box__more">
+								<a href="#" class="news-box__btn">Читать полностью</a>
+							</div>
+						</div><!--/news-box-->
+						<div class="news-box">
+							<div class="news-box__info">
+								<div class="news-box__data">15.04.2022</div>
+								<a href="#" class="news-box__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+								<div class="news-box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+							</div>
+							<div class="news-box__more">
+								<a href="#" class="news-box__btn">Читать полностью</a>
+							</div>
+						</div><!--/news-box-->
+						<div class="news-box">
+							<div class="news-box__info">
+								<div class="news-box__data">15.04.2022</div>
+								<a href="#" class="news-box__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+								<div class="news-box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+							</div>
+							<div class="news-box__more">
+								<a href="#" class="news-box__btn">Читать полностью</a>
+							</div>
+						</div><!--/news-box-->
+						<div class="news-box">
+							<div class="news-box__info">
+								<div class="news-box__data">15.04.2022</div>
+								<a href="#" class="news-box__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+								<div class="news-box__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+							</div>
+							<div class="news-box__more">
+								<a href="#" class="news-box__btn">Читать полностью</a>
+							</div>
+						</div><!--/news-box-->
+					</div>
+				</div>
+			</section><!--/news-->
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="section__header">
+						<h2 class="title title_white">Хочу быть в курсе акций и новинок <span class="title-dot"></span></h2>
+					</div>
+					<div class="footer__row">
+						<div class="footer__text">Подписываясь, вы соглашаетесь с использованием персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></div>
+						<form action="#" class="footer__subscription subscription">
+							<input type="text" placeholder="Введите свою электронную почту">
+							<button type="submit">Подписаться</button>
+						</form>
+					</div>
+				</div><!--/footer__inner-->
+				<div class="footer__inner">
+					<div class="footer-menu">
+						<div class="footer-menu__col">
+							<div class="footer__text">Мы работаем в этой сфере с 2007 года и успешно применяем накопленный опыт. Наши сотрудники всегда готовы Вам помочь, обеспечат комфортную покупку и информационную поддержку.</div>
+						</div>
+						<div class="footer-menu__col">
+							<h3 class="footer-menu__title">Контакты</h3>
+							<ul class="footer-menu__list">
+								<li><a href="tel:+79252866828" class="footer-menu__link">+7 925 286 68 28</a></li>
+								<li><a href="mailto:support@dient.ru" class="footer-menu__link">support@dient.ru</a></li>
+							</ul>
+							<div class="footer-social">
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/vk-icon.svg" alt="">
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/inst-icon.svg" alt="">
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/wtsp-icon.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<h3 class="footer-menu__title">Информация</h3>
+							<ul class="footer-menu__list">
+								<li><a href="#" class="footer-menu__link">О компании</a></li>
+								<li><a href="#" class="footer-menu__link">Контакты</a></li>
+								<li><a href="#" class="footer-menu__link">Статьи</a></li>
+							</ul>
+						</div>
+						<div class="footer-menu__col">
+							<h3 class="footer-menu__title">Клиентам</h3>
+							<ul class="footer-menu__list">
+								<li><a href="#" class="footer-menu__link">Оплата</a></li>
+								<li><a href="#" class="footer-menu__link">Доставка</a></li>
+								<li><a href="#" class="footer-menu__link">Обратная связь</a></li>
+								<li><a href="#" class="footer-menu__link">Вопрос-ответ</a></li>
+								<li><a href="#" class="footer-menu__link">Госзаказ</a></li>
+							</ul>
+						</div>
+					</div>
+				</div><!--/footer__inner-->
+				<div class="footer__inner">
+					<div class="footer__row">
+						<div class="footer__links">
+							<a href="#" class="footer__link">Политика конфиденциальности</a>
+							<a href="#" class="footer__link">Персональные данные</a>
+						</div>
+						<div class="footer__copyright">ООО “ДИЕНТ”, 2007г. - 2022г.</div>
+					</div>
+				</div><!--/footer__inner-->
+			</div>
+		</footer>
+	</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link href="assets/css/jquery.formstyler.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<title>Страница товара</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="search" viewBox="0 0 24 24">
+			<g mask="url(#mask0_228_269)">
+				<path d="M15 16L19.5 21.5" stroke-width="1.5"/>
+				<circle cx="11" cy="10" r="7" stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="favorite" viewBox="0 0 22 21">
+			<g>
+				<path d="M19.4134 2.76153C18.3781 1.62561 16.9575 1 15.413 1C14.2585 1 13.2012 1.36922 12.2704 2.09733C11.8008 2.46486 11.3752 2.9145 11 3.43932C10.6249 2.91466 10.1992 2.46486 9.7294 2.09733C8.79877 1.36922 7.74149 1 6.58701 1C5.04251 1 3.62177 1.62561 2.58646 2.76153C1.56351 3.88418 1 5.41788 1 7.08032C1 8.79138 1.63034 10.3576 2.98364 12.0096C4.19427 13.4873 5.93423 14.9873 7.94916 16.7243C8.63718 17.3175 9.41705 17.9899 10.2268 18.7061C10.4408 18.8957 11 19.5 11 19.5C11 19.5 11.5592 18.8957 11.7729 18.7064C12.5826 17.99 13.363 17.3173 14.0513 16.7238C16.0659 14.9872 17.8059 13.4873 19.0165 12.0094C20.3698 10.3576 21 8.79138 21 7.08016C21 5.41788 20.4365 3.88418 19.4134 2.76153Z"  stroke-width="2"/>
+			</g>
+		</symbol>
+		<symbol id="view-btn_1" viewBox="0 0 24 24">
+			<g mask="url(#mask0_18_12810)">
+				<rect x="4" y="4" width="6" height="6" rx="1"  stroke-width="1.5"/>
+				<rect x="4" y="14" width="6" height="6" rx="1"  stroke-width="1.5"/>
+				<rect x="14" y="4" width="6" height="6" rx="1"  stroke-width="1.5"/>
+				<rect x="14" y="14" width="6" height="6" rx="1"  stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="view-btn_2" viewBox="0 0 24 24">
+			<g mask="url(#mask0_18_12809)">
+				<rect x="4" y="4" width="16" height="6" rx="1"  stroke-width="1.5"/>
+				<rect x="4" y="14" width="16" height="6" rx="1"  stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="view-btn_3" viewBox="0 0 24 24">
+			<g mask="url(#mask0_18_12808)">
+				<rect x="4" y="4" width="16" height="3" rx="0.5"  stroke-width="1.5"/>
+				<rect x="4" y="10" width="16" height="3" rx="0.5"  stroke-width="1.5"/>
+				<rect x="4" y="16" width="16" height="3" rx="0.5"  stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="reset" viewBox="0 0 18 20">
+			<g>
+				<path d="M1 11C1 15.4183 4.58172 19 9 19C13.4183 19 17 15.4183 17 11C17 6.58172 13.4183 3 9 3" fill="none"  stroke-width="1.5"/>
+				<path d="M6 3L9.75 0.401924V5.59808L6 3Z"/>
+			</g>
+		</symbol>
+		<symbol id="plus" viewBox="0 0 18 20">
+			<g mask="url(#mask0_4_2856)">
+				<path d="M6 12H18"  stroke-width="1.5"/>
+				<path d="M12 18V6"  stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="arrow" viewBox="0 0 12 8" fill="none">
+			<g>
+				<path d="M11 1L6 6L1 1" stroke-width="1.5"/>
+			</g>
+		</symbol>
+		<symbol id="print" viewBox="0 0 20 20" fill="none">
+			<g mask="url(#mask0_18_14449)">
+				<path d="M14 15H17V9C17 7.89543 16.1046 7 15 7H5C3.89543 7 3 7.89543 3 9V15H6"  stroke-width="1.5"/>
+				<rect width="8" height="4" transform="matrix(-1 0 0 1 14 13)"  stroke-width="1.5"/>
+				<rect width="8" height="4" transform="matrix(-1 0 0 1 14 3)"  stroke-width="1.5"/>
+			</g>
+		</symbol>
+	</svg>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__row header-mobile">
+						<div class="header__location location">
+							<select>
+								<option value="1">Новосибирск</option>
+								<option value="2">Москва</option>
+							</select>
+						</div>
+						<nav class="header__nav">
+							<ul>
+								<li><a href="#" class="header__link">О компании</a></li>
+								<li><a href="#" class="header__link">Обратная связь</a></li>
+								<li><a href="#" class="header__link">Вопрос-ответ</a></li>
+								<li><a href="#" class="header__link">Оплата</a></li>
+								<li><a href="#" class="header__link">Доставка</a></li>
+								<li><a href="#" class="header__link">Контакты</a></li>
+								<li><a href="#" class="header__link">Госзаказ</a></li>
+							</ul>
+						</nav>
+						<div class="header__phone">
+							<a href="tel:+79252866828">+7 925 286 68 28</a>
+						</div>
+					</div>
+					<div class="header__row">
+						<a href="#" class="header__logo logo">
+							<div class="logo__title">
+								<img src="assets/images/logo.svg" alt="">
+							</div>
+							<span class="logo__subtitle">товары для офиса и дома онлайн</span>
+						</a>
+						<div class="burger">
+							<span class="burger__item"></span>
+						</div>
+						<div class="header__menu">
+							<a href="#" class="catalog-btn">
+								<div class="catalog-btn__burger">
+									<span class="catalog-btn__burger-item"></span>
+								</div>
+								<span>Каталог товаров</span>
+							</a>
+							<form class="header__search search">
+								<input type="text" placeholder="Поиск по названию, коду, артикулу товара...">
+								<button type="submit">
+									<svg>
+										<use xlink:href="#search"></use>
+									</svg>
+								</button>
+							</form>
+							<div class="header__buttons">
+								<a href="#" class="header__button cart">
+									<img src="assets/images/cart.svg" alt="">
+									<span class="cart__number">2</span>
+								</a>
+								<a href="#" class="header__button">
+									<img src="assets/images/heart.svg" alt="">
+								</a>
+								<a href="#" class="header__button user">
+									<img src="assets/images/user.svg" alt="">
+									<span class="header__button-subtitle">Вход в аккаунт</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main page page_product">
+			<div class="page__header">
+				<div class="container">
+					<div class="breadcrumbs">
+						<a href="/" class="breadcrumbs__item">Главная</a>
+						<a href="#" class="breadcrumbs__item">Каталог</a>
+						<a href="#" class="breadcrumbs__item">Письменные товары, черчение</a>
+						<a href="#" class="breadcrumbs__item">Ручки шариковые</a>
+						<a href="#" class="breadcrumbs__item">Ручка шариковая Berlingo "Skyline" светло-синяя, 0,7мм, игольчатый стержень, грип</a>
+					</div><!--/breadcrumbs-->
+					<div class="section__header">
+						<h1 class="title">Ручки шариковые <span class="title-dot"></span></h1>
+						<span class="subtitle">784 товара</span>
+					</div>
+				</div>
+			</div><!--/page__header-->
+			<div class="product">
+				<div class="container">
+					<div class="product-card">
+						<h1 class="title">Ручка шариковая Berlingo "Skyline" светло-синяя, 0,7мм, игольчатый стержень, грип <span class="title-dot"></span></h1>
+						<div class="product-card__nav">
+							<a href="#" class="product-card__rating product-card__btn">
+								<div class="rating-stars">
+									<div style="width: 100%"></div>
+								</div>
+								<span>54 отзыва</span>
+							</a>
+							<a href="#" class="product-card__btn">
+								<svg>
+									<use xlink:href="#favorite"></use>
+								</svg>
+								<span>В избранное</span>
+							</a>
+							<a href="#" class="product-card__btn">
+								<svg>
+									<use xlink:href="#print"></use>
+								</svg>
+								<span>Распечатать карточку</span>
+							</a>
+						</div>
+						<div class="product-card__inner">
+							<div class="product-card__photo">
+								<div class="product-card__slider">
+									<div class="photo-slider__box">
+										<div class="photo-slider__nav">
+											<div class="photo-slider photo-slider-nav">
+												<div>
+												 	<img src="assets/images/pen-slide_1.png" alt=""> 
+												</div>
+												<div>
+													<img src="assets/images/pen-slide_2.png" alt=""> 
+												</div>
+												<div>
+													<img src="assets/images/pen-slide_3.png" alt=""> 
+												</div>
+												<div>
+													<img src="assets/images/pen-slide_4.png" alt=""> 
+												</div>
+												<div>
+													<img src="assets/images/pen-slide_2.png" alt=""> 
+												</div>
+											</div>
+										</div>
+										<div class="photo-slider photo-slider-for">
+											<div>
+										 		<img src="assets/images/pen-slide_1.png" alt=""> 
+											</div>
+											<div>
+												<img src="assets/images/pen-slide_2.png" alt=""> 
+											</div>
+											<div>
+												<img src="assets/images/pen-slide_3.png" alt=""> 
+											</div>
+											<div>
+												<img src="assets/images/pen-slide_4.png" alt=""> 
+											</div>
+											<div>
+												<img src="assets/images/pen-slide_2.png" alt=""> 
+											</div>
+										</div>
+										<div class="photo-slider__arrows">
+											<div class="photo-slider__arrow photo-slider__arrow_prev">
+												<svg>
+													<use xlink:href="#arrow"></use>
+												</svg>
+											</div>
+											<div class="photo-slider__arrow photo-slider__arrow_next">
+												<svg>
+													<use xlink:href="#arrow"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-card__info product-info">
+								<div class="product-card__status status status_availability">В наличии</div>
+								<div class="product-info__title">Краткие характеристики</div>
+								<div class="product-info__characteristic">
+									<div class="product-info__item">
+										<div class="product-info__description">Вид товара:</div>
+										<div class="product-info__line"></div>
+										<div class="product-info__data">ручка шариковая</div>
+									</div><!--/product-info__item-->
+									<div class="product-info__item">
+										<div class="product-info__description">Тип: товара:</div>
+										<div class="product-info__line"></div>
+										<div class="product-info__data">неавтоматическая</div>
+									</div><!--/product-info__item-->
+									<div class="product-info__item">
+										<div class="product-info__description">Набор:</div>
+										<div class="product-info__line"></div>
+										<div class="product-info__data">нет</div>
+									</div><!--/product-info__item-->
+									<div class="product-info__item">
+										<div class="product-info__description">Количество в наборе:</div>
+										<div class="product-info__line"></div>
+										<div class="product-info__data">1</div>
+									</div><!--/product-info__item-->
+									<div class="product-info__item">
+										<div class="product-info__description">Цвет чернил:</div>
+										<div class="product-info__line"></div>
+										<div class="product-info__data">светло-синий</div>
+									</div><!--/product-info__item-->
+								</div>
+								<div class="product-info__link">
+									<a href="#">Полное описание и характеристики</a>
+								</div>
+							</div>
+							<div class="product-card__buy product-buy">
+								<div class="product-buy__price price">
+									<span>28,53 ₽</span>
+								</div>
+								<div class="product-buy__choice">
+									<div class="product-buy__radiobtn">
+										<input type="radio" name="product-qt" id="product-qt_1">
+										<label for="product-qt_1">
+											<span></span>
+											<i>Поштучно</i>
+										</label>
+									</div>
+									<div class="product-buy__radiobtn">
+										<input type="radio" name="product-qt" id="product-qt_2">
+										<label for="product-qt_2">
+											<span></span>
+											<i>В упаковке</i>
+											<i>(30 шт.)</i>
+										</label>
+									</div>
+									<div class="product-buy__radiobtn">
+										<input type="radio" name="product-qt" id="product-qt_3">
+										<label for="product-qt_3">
+											<span></span>
+											<i>В коробке</i>
+											<i>(840 шт.)</i>
+										</label>
+									</div>
+								</div>
+								<div class="product-buy__pay pay">
+									<div class="pay__description">Сумма к оплате:</div>
+									<div class="pay__sum">43,88 ₽</div>
+								</div>
+								<div class="product-buy__end">
+									<div class="product-buy__quantity quantity">
+										<a href="#" class="quantity__subtract"></a>
+										<input class="quantity__number" type="text" value="1">
+										<a href="#" class="quantity__add"></a>
+									</div>
+									<a href="#" class="product-buy__btn btn">В корзину</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/product-->
+			<div class="product-about">
+				<div class="container">
+					<div class="product-about__inner">
+						<div class="tabs-nav">
+							<a href="#" onclick="javascript:tabsProduct(1);return false;" class="t1 active">Описание</a>
+							<a href="#" onclick="javascript:tabsProduct(2);return false;"  class="t2">Отзывы</a>
+							<a href="#" onclick="javascript:tabsProduct(3);return false;"  class="t3">Сертификаты</a>
+							<a href="#" onclick="javascript:tabsProduct(4);return false;"  class="t4">Аналоги</a>
+						</div><!--/tabs-nav-->
+						<div class="tabs-block tab_1">
+							<div class="product-about__info page-info">
+								<div class="product-info__text">
+									<p>Одноразовая шариковая ручка Berlingo Skyline, в стильном дизайне, сочетающем комплементарные цвета, оснащенная вентилируемым колпачком и пластиковым клипом. Корпус ручки имеет эргономичную трехгранную форму, а резиновый эргономичный упор для пальцев предотвращает усталость и скольжение пальцев при письме.</p>
+									<p>Диаметр пишущего узла составляет 0,7 мм, благодаря чему ручка прекрасно подходит для любого стиля письма. Толщина линии письма – 0,5 мм, а длина – 1200 м.</p>
+									<p>Уникальная запатентованная технология Smart Ink обеспечивает лёгкое и приятное письмо, за счёт использования чернил пониженной вязкости и инновационных материалов шарика, пишущего узла и его специальной конструкции. Инновационные компоненты, используемые для изготовления шарика пишущего узла (карбид вольфрама), обеспечивают долговечность и стабильность качества письма.</p>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Основные характеристики</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Вид товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">ручка шариковая</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Количество в наборе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">1</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Тип:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">неавтоматическая</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Многоразовая:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Набор:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Механизм:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">отсутствует</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Стержень</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Цвет чернил:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">светло-синий</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Чернила на масляной основе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Диаметр пишущего узла:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">0,7 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина письма:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">1200 м</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Толщина линии:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">0,5 мм</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Корпус</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Игольчатый наконечник:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Клип:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">пластиковый</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Форма корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">трехгранная</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие топпера:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие резинового грипа:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">есть</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Диаметр корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">9,1 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Материал корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">оранжевый</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина ручки с колпачком:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">147 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Рисунок на корпусе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина ручки без колпачка:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">139 мм</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Дополнительная информация</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие штрихкода на ед. товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">есть</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Вид минимальной групповой упаковки:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">картонная коробка</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Микс дизайнов в минимальной упаковке:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Морозоустойчивость:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Упаковка ед. товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Подходит под персонализацию:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие европодвеса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+							</div>
+						</div><!--/tabs-block-->
+						<div class="tabs-block tab_2">
+							<div class="product-about__info page-info">
+								<div class="product-info__text">
+									<p>Одноразовая шариковая ручка Berlingo Skyline, в стильном дизайне, сочетающем комплементарные цвета, оснащенная вентилируемым колпачком и пластиковым клипом. Корпус ручки имеет эргономичную трехгранную форму, а резиновый эргономичный упор для пальцев предотвращает усталость и скольжение пальцев при письме.</p>
+									<p>Диаметр пишущего узла составляет 0,7 мм, благодаря чему ручка прекрасно подходит для любого стиля письма. Толщина линии письма – 0,5 мм, а длина – 1200 м.</p>
+									<p>Уникальная запатентованная технология Smart Ink обеспечивает лёгкое и приятное письмо, за счёт использования чернил пониженной вязкости и инновационных материалов шарика, пишущего узла и его специальной конструкции. Инновационные компоненты, используемые для изготовления шарика пишущего узла (карбид вольфрама), обеспечивают долговечность и стабильность качества письма.</p>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Основные характеристики</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Вид товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">ручка шариковая</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Количество в наборе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">1</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Тип:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">неавтоматическая</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Многоразовая:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Набор:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Механизм:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">отсутствует</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Стержень</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Цвет чернил:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">светло-синий</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Чернила на масляной основе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Диаметр пишущего узла:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">0,7 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина письма:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">1200 м</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Толщина линии:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">0,5 мм</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Корпус</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Игольчатый наконечник:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Клип:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">пластиковый</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Форма корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">трехгранная</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие топпера:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие резинового грипа:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">есть</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Диаметр корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">9,1 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Материал корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">оранжевый</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина ручки с колпачком:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">147 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Рисунок на корпусе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина ручки без колпачка:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">139 мм</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Дополнительная информация</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие штрихкода на ед. товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">есть</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Вид минимальной групповой упаковки:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">картонная коробка</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Микс дизайнов в минимальной упаковке:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Морозоустойчивость:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Упаковка ед. товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Подходит под персонализацию:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие европодвеса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+							</div>
+						</div><!--/tabs-block-->
+						<div class="tabs-block tab_3">
+							<div class="product-about__info page-info">
+								<div class="product-info__text">
+									<p>Одноразовая шариковая ручка Berlingo Skyline, в стильном дизайне, сочетающем комплементарные цвета, оснащенная вентилируемым колпачком и пластиковым клипом. Корпус ручки имеет эргономичную трехгранную форму, а резиновый эргономичный упор для пальцев предотвращает усталость и скольжение пальцев при письме.</p>
+									<p>Диаметр пишущего узла составляет 0,7 мм, благодаря чему ручка прекрасно подходит для любого стиля письма. Толщина линии письма – 0,5 мм, а длина – 1200 м.</p>
+									<p>Уникальная запатентованная технология Smart Ink обеспечивает лёгкое и приятное письмо, за счёт использования чернил пониженной вязкости и инновационных материалов шарика, пишущего узла и его специальной конструкции. Инновационные компоненты, используемые для изготовления шарика пишущего узла (карбид вольфрама), обеспечивают долговечность и стабильность качества письма.</p>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Основные характеристики</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Вид товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">ручка шариковая</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Количество в наборе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">1</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Тип:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">неавтоматическая</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Многоразовая:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Набор:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Механизм:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">отсутствует</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Стержень</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Цвет чернил:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">светло-синий</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Чернила на масляной основе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Диаметр пишущего узла:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">0,7 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина письма:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">1200 м</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Толщина линии:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">0,5 мм</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Корпус</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Игольчатый наконечник:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Клип:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">пластиковый</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Форма корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">трехгранная</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие топпера:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие резинового грипа:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">есть</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Диаметр корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">9,1 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Материал корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">оранжевый</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина ручки с колпачком:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">147 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Рисунок на корпусе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина ручки без колпачка:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">139 мм</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Дополнительная информация</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие штрихкода на ед. товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">есть</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Вид минимальной групповой упаковки:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">картонная коробка</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Микс дизайнов в минимальной упаковке:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Морозоустойчивость:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Упаковка ед. товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Подходит под персонализацию:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие европодвеса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+							</div>
+						</div><!--/tabs-block-->
+						<div class="tabs-block tab_4">
+							<div class="product-about__info page-info">
+								<div class="product-info__text">
+									<p>Одноразовая шариковая ручка Berlingo Skyline, в стильном дизайне, сочетающем комплементарные цвета, оснащенная вентилируемым колпачком и пластиковым клипом. Корпус ручки имеет эргономичную трехгранную форму, а резиновый эргономичный упор для пальцев предотвращает усталость и скольжение пальцев при письме.</p>
+									<p>Диаметр пишущего узла составляет 0,7 мм, благодаря чему ручка прекрасно подходит для любого стиля письма. Толщина линии письма – 0,5 мм, а длина – 1200 м.</p>
+									<p>Уникальная запатентованная технология Smart Ink обеспечивает лёгкое и приятное письмо, за счёт использования чернил пониженной вязкости и инновационных материалов шарика, пишущего узла и его специальной конструкции. Инновационные компоненты, используемые для изготовления шарика пишущего узла (карбид вольфрама), обеспечивают долговечность и стабильность качества письма.</p>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Основные характеристики</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Вид товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">ручка шариковая</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Количество в наборе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">1</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Тип:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">неавтоматическая</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Многоразовая:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Набор:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Механизм:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">отсутствует</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Стержень</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Цвет чернил:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">светло-синий</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Чернила на масляной основе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Диаметр пишущего узла:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">0,7 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина письма:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">1200 м</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Толщина линии:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">0,5 мм</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Корпус</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Игольчатый наконечник:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Клип:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">пластиковый</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Форма корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">трехгранная</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие топпера:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие резинового грипа:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">есть</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Диаметр корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">9,1 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Материал корпуса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">оранжевый</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина ручки с колпачком:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">147 мм</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Рисунок на корпусе:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Длина ручки без колпачка:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">139 мм</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+								<div class="product-info__block">
+									<h3 class="product-info__title">Дополнительная информация</h3>
+									<div class="product-info__characteristic product-info__characteristic_flex">
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие штрихкода на ед. товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">есть</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Вид минимальной групповой упаковки:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">картонная коробка</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Микс дизайнов в минимальной упаковке:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Морозоустойчивость:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">да</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Упаковка ед. товара:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Подходит под персонализацию:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+										<div class="product-info__item">
+											<div class="product-info__description">Наличие европодвеса:</div>
+											<div class="product-info__line"></div>
+											<div class="product-info__data">нет</div>
+										</div><!--/product-info__item-->
+									</div>
+								</div>
+							</div>
+						</div><!--/tabs-block-->			
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="section__header">
+						<h2 class="title title_white">Хочу быть в курсе акций и новинок <span class="title-dot"></span></h2>
+					</div>
+					<div class="footer__row">
+						<div class="footer__text">Подписываясь, вы соглашаетесь с использованием персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></div>
+						<form action="#" class="footer__subscription subscription">
+							<input type="text" placeholder="Введите свою электронную почту">
+							<button type="submit">Подписаться</button>
+						</form>
+					</div>
+				</div><!--/footer__inner-->
+				<div class="footer__inner">
+					<div class="footer-menu">
+						<div class="footer-menu__col">
+							<div class="footer__text">Мы работаем в этой сфере с 2007 года и успешно применяем накопленный опыт. Наши сотрудники всегда готовы Вам помочь, обеспечат комфортную покупку и информационную поддержку.</div>
+						</div>
+						<div class="footer-menu__col">
+							<h3 class="footer-menu__title">Контакты</h3>
+							<ul class="footer-menu__list">
+								<li><a href="tel:+79252866828" class="footer-menu__link">+7 925 286 68 28</a></li>
+								<li><a href="mailto:support@dient.ru" class="footer-menu__link">support@dient.ru</a></li>
+							</ul>
+							<div class="footer-social">
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/vk-icon.svg" alt="">
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/inst-icon.svg" alt="">
+								</a>
+								<a href="#" class="footer-social__icon" target="blank">
+									<img src="assets/images/wtsp-icon.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<h3 class="footer-menu__title">Информация</h3>
+							<ul class="footer-menu__list">
+								<li><a href="#" class="footer-menu__link">О компании</a></li>
+								<li><a href="#" class="footer-menu__link">Контакты</a></li>
+								<li><a href="#" class="footer-menu__link">Статьи</a></li>
+							</ul>
+						</div>
+						<div class="footer-menu__col">
+							<h3 class="footer-menu__title">Клиентам</h3>
+							<ul class="footer-menu__list">
+								<li><a href="#" class="footer-menu__link">Оплата</a></li>
+								<li><a href="#" class="footer-menu__link">Доставка</a></li>
+								<li><a href="#" class="footer-menu__link">Обратная связь</a></li>
+								<li><a href="#" class="footer-menu__link">Вопрос-ответ</a></li>
+								<li><a href="#" class="footer-menu__link">Госзаказ</a></li>
+							</ul>
+						</div>
+					</div>
+				</div><!--/footer__inner-->
+				<div class="footer__inner">
+					<div class="footer__row">
+						<div class="footer__links">
+							<a href="#" class="footer__link">Политика конфиденциальности</a>
+							<a href="#" class="footer__link">Персональные данные</a>
+						</div>
+						<div class="footer__copyright">ООО “ДИЕНТ”, 2007г. - 2022г.</div>
+					</div>
+				</div><!--/footer__inner-->
+			</div>
+		</footer>
+	</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="assets/js/jquery.formstyler.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

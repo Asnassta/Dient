@@ -1375,8 +1375,9 @@ h1, h2, h3, h4, h5, h6 {
     height: 18.5px;
     stroke: #97A2B6;
     fill: none; }
-  .favorite:hover svg {
-    stroke: #E31235; }
+  @media (min-width: 1025px) {
+    .favorite:hover svg {
+      stroke: #E31235; } }
   .favorite.active svg {
     stroke: #E31235;
     fill: #E31235; }

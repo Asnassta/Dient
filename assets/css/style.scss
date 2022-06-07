@@ -839,9 +839,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
-	&:hover {
-		.product-box__buy {
-			visibility: visible;
+	@media(min-width: 1025px) {
+		&:hover {
+			.product-box__buy {
+				visibility: visible;
+			}
 		}
 	}
 	&_full {
@@ -970,17 +972,19 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		display: flex;
 		align-items: center;
 		margin-top: 16px;
-		visibility: hidden;
-		position: absolute;
-		width: 100%;
-		top: calc(100% - 30px);
-		left: 0;
-		z-index: 100;
-		background-color: $wh;
-		padding: 0 24px 30px;
-		border-bottom: 1px solid $purple;
-		box-shadow: 0px 8px 10px rgba(164, 167, 175, 0.25);
-		transition: all .1s linear;
+		@media(min-width: 1025px) {
+			visibility: hidden;
+			position: absolute;
+			width: 100%;
+			top: calc(100% - 30px);
+			left: 0;
+			z-index: 100;
+			background-color: $wh;
+			padding: 0 24px 30px;
+			border-bottom: 1px solid $purple;
+			box-shadow: 0px 8px 10px rgba(164, 167, 175, 0.25);
+			transition: all .1s linear;
+		}
 	}
 	&__quantity {
 		margin-right: 24px;
